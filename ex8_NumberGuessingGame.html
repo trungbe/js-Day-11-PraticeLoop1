@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đoán số</title>
+</head>
+<body>
+<button onclick="checkNum()">CHƠI</button>
+<script>
+    function checkNum() {
+        // debugger
+        let num = +prompt("Nhập khoảng số muốn đoán");
+        let numRandom = Math.floor(Math.random() * num);
+        console.log(numRandom);
+        let count = 0;
+        let guessNum;
+        do {
+            guessNum = +prompt("Số bạn đoán là ");
+            if (guessNum == numRandom) {
+                alert("Đúng rồi");
+            } else if (guessNum > numRandom) {
+                alert("Bạn sai rồi, chọn số nhỏ hơn đi");
+            } else {
+                alert("Bạn sai rồi, chọn số lớn hơn đi")
+            }
+            count++;
+            if (count == 3) {
+                alert("Bạn đã hết lượt chơi! <br>Vui lòng chơi lại");
+            }
+        } while (guessNum !== numRandom && count < 3);
+    }
+</script>
+</body>
+</html>

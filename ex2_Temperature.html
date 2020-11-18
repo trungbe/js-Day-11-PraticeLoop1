@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra nhiệt độ</title>
+</head>
+<body>
+<script>
+    // let temp = +prompt("Nhập nhiệt độ");
+    //
+    // while (temp == true) {
+    // }
+    // if (temp > 100) {
+    //     alert("Giảm nhiệt độ");
+    // } else if (temp < 20) {
+    //     alert("Tăng nhiệt độ");
+    // }
+    let nhietdo;
+    do {
+        nhietdo = +prompt("Nhap nhiet do:");
+    } while (nhietdo < 1 || nhietdo > 100 || isNaN(nhietdo) == true);
+    if (nhietdo < 20)
+        alert("Nhiet do qua thap, can tang nhiet do!");
+    else if (nhietdo > 100)
+        alert("Nhiet do qua cao, can giam nhiet do! ");
+    else
+        alert("Nhiet do vua phai!");
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị 20 số Fibonacci</title>
+
+</head>
+<body>
+
+<script>
+    let number;
+    do {
+        number = +prompt("Nhập số: ")
+    } while (isNaN(number) || number < 0)
+
+    let count = 2;
+    let f0 = 0;
+    let f1 = 1;
+    let f2;
+    document.write(f0 + "<br>");
+    document.write(f1 + "<br>");
+    do {
+        f2 = f0 + f1;
+        f0 = f1;
+        f1 = f2;
+        document.write(f2 + "<br>");
+        count++;
+    } while (count <number);
+
+</script>
+</body>
+</html>
